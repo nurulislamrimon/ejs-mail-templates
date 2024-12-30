@@ -9,119 +9,6 @@
       rel="stylesheet"
     />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        display: grid;
-        height: 100vh;
-        place-items: center;
-        overflow-y: auto;
-        background: #bebdbd;
-        font-family: "Open Sans", sans-serif;
-        gap: 10px;
-      }
-
-      /* Global Styles */
-
-      .template-container {
-        background-color: #ffff;
-        max-width: 600px;
-        border-radius: 10px;
-        overflow-y: auto;
-        --webkit-scrollbar-width: none;
-        padding-bottom: 20px;
-        border: 1px solid #e6e6e6;
-      }
-
-      .template-header {
-        display: grid;
-        place-items: center;
-        border-bottom: 1px solid #e6e6e6;
-        padding: 20px;
-      }
-
-      .logo-img {
-        width: 180px;
-        height: 50px;
-      }
-
-      .template-footer {
-        display: grid;
-        justify-items: center;
-        align-items: center;
-        text-align: center;
-        gap: 10px;
-      }
-      .template-footer h2 {
-        font-weight: 700;
-        font-size: 20px;
-        background: linear-gradient(90deg, #294393, #04a4e6 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      .template-footer span {
-        font-size: 14px;
-        font-weight: 400;
-        color: #4c4c4c;
-        line-height: 23px;
-      }
-      .social-media-link {
-        display: grid;
-        grid-auto-flow: column;
-        justify-content: center;
-        align-items: center;
-        gap: 7px;
-      }
-      .social-media-link a {
-        text-decoration: none;
-        color: #ffff;
-        border-radius: 50%;
-        width: 26px;
-        height: 26px;
-        padding: 6px;
-        background: linear-gradient(180deg, #01904d 0%, #0ce47f 100%);
-        display: grid;
-        place-items: center;
-      }
-
-      @media screen and (max-width: 768px) {
-        .template-container {
-          padding-bottom: 10px;
-        }
-        .template-header {
-          padding: 10px;
-        }
-        .logo-img {
-          width: 140px;
-          height: 40px;
-        }
-        .template-footer {
-          gap: 5px;
-        }
-        .template-footer h2 {
-          font-size: 16px;
-          font-weight: 600;
-        }
-        .template-footer span {
-          font-size: 12px;
-        }
-        .social-media-link {
-          gap: 5px;
-        }
-        .social-media-link a {
-          width: 20px;
-          height: 20px;
-          padding: 5px;
-        }
-      }
-
-      /* Global Styles */
-
       .template-body {
         padding: 35px 30px;
         display: grid;
@@ -222,9 +109,8 @@
   </head>
   <body>
     <div class="template-container">
-      <div class="template-header">
-        <img class="logo-img" src="./assets/LogoElite.png" alt="logo" />
-      </div>
+      <%- include('./components/header.ejs') %>
+
       <div class="template-body">
         <div class="template-body-content">
           <img src="./assets//AdminGreetingsSVG.png" alt="greeting-admin" />
@@ -253,31 +139,12 @@
             href="https://dashboard.elitecommerce.app/login"
             target="_blank"
             id="website-login-btn"
-            >Login Elite Commerce
+          >
+            Login Elite Commerce
           </a>
         </div>
       </div>
-      <div class="template-footer">
-        <h2>Need Help?</h2>
-        <span>Please Notify In Our Social Media.</span>
-        <div class="social-media-link">
-          <a href="#">
-            <img src="./assets/social-icons/LinkedInIcon.png" alt="linkedin" />
-          </a>
-          <a href="#">
-            <img src="./assets/social-icons/DiscordIcon.png" alt="discord" />
-          </a>
-          <a href="#">
-            <img src="./assets/social-icons/GithubIcon.png" alt="github" />
-          </a>
-          <a href="#">
-            <img src="./assets/social-icons/WhatsappIcon.png" alt="whatsapp" />
-          </a>
-          <a href="#">
-            <img src="./assets/social-icons/MailIcon.png" alt="mail" />
-          </a>
-        </div>
-      </div>
+      <%- include('./components/footer.ejs' ,{socialMedias}) %>
     </div>
   </body>
 </html>
