@@ -67,11 +67,11 @@
   </head>
   <body>
     <div class="template-container">
-      <%- include('./components/header.ejs') %>
+      <%- include('./components/header.ejs',{logoUrl}) %>
 
       <div class="template-body">
         <div class="template-body-content">
-          <img src="./assets/signUpVerificationSvg.png" alt="greetings-svg" />
+          <%- include('./components/heros/SignupVerificationSvg.ejs') %>
           <h1>Sign Up Verification Code</h1>
           <p>
             Please enter this confirmation code in the window
@@ -81,10 +81,9 @@
         </div>
         <div class="sign-up-otp-info">
           <div class="otp-box">
-            <span>5</span>
-            <span>4</span>
-            <span>8</span>
-            <span>9</span>
+            <% otp.forEach(digit => { %>
+            <span><%= digit %></span>
+            <% }); %>
           </div>
           <p>
             All you have to do is copy the confirmation code and paste it to

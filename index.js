@@ -7,6 +7,8 @@ app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "public")));
 
+const logoUrl = "/mail_assets/assets/LogoElite.png";
+
 const socialMedias = [
   {
     name: "Discord",
@@ -33,26 +35,33 @@ const socialMedias = [
 app.get("/admin-greetings", (req, res) => {
   res.render("admin-greetings", {
     socialMedias,
+    logoUrl,
   });
 });
 app.get("/customer-greetings", (req, res) => {
   res.render("customer-greetings", {
     socialMedias,
+    logoUrl,
   });
 });
 app.get("/password-reset-completed", (req, res) => {
   res.render("password-reset-completed", {
     socialMedias,
+    logoUrl,
   });
 });
 app.get("/password-reset-otp", (req, res) => {
   res.render("password-reset-otp", {
     socialMedias,
+    logoUrl,
+    otp: [1, 2, 4, 5],
   });
 });
 app.get("/sign-up-verification", (req, res) => {
   res.render("sign-up-verification", {
     socialMedias,
+    logoUrl,
+    otp: [1, 2, 4, 5],
   });
 });
 

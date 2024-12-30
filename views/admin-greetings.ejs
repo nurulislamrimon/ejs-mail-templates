@@ -109,11 +109,11 @@
   </head>
   <body>
     <div class="template-container">
-      <%- include('./components/header.ejs') %>
+      <%- include('./components/header.ejs',{logoUrl}) %>
 
       <div class="template-body">
         <div class="template-body-content">
-          <img src="./assets//AdminGreetingsSVG.png" alt="greeting-admin" />
+          <%- include('./components/heros/AdminGreetingSvg.ejs') %>
           <span>Mr Admin</span>
           <h1>Welcome To Elite Commerce</h1>
           <p>
@@ -126,9 +126,8 @@
             <h3>Login Email</h3>
             <span>admin@gmail.com</span>
           </div>
-          <div
-            style="border-bottom: 1px solid #e6e6e6; margin: 20px auto"
-          ></div>
+          <hr style="border-top:1px solid rgb(114, 113, 113);"
+          ></hr>
           <div>
             <h3>Login Password</h3>
             <span>123456789</span>

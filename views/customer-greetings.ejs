@@ -102,11 +102,11 @@
   </head>
   <body>
     <div class="template-container">
-      <%- include('./components/header.ejs') %>
+      <%- include('./components/header.ejs',{logoUrl}) %>
 
       <div class="template-body">
         <div class="greetings-body-info">
-          <img src="./assets/greetings.png" alt="greetings" />
+          <%- include('./components/heros/CustomerGreetingSvg.ejs') %>
           <h1>Welcome to Elite Commerce</h1>
         </div>
 
