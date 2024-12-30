@@ -107,13 +107,13 @@
       <div class="template-body">
         <div class="greetings-body-info">
           <%- include('./components/heros/CustomerGreetingSvg.ejs') %>
-          <h1>Welcome to Elite Commerce</h1>
+          <h1>Welcome to <%= shopName %></h1>
         </div>
 
         <div class="greetings">
           <p>
             Thank you for joining
-            <b>EliteCommerce!</b>
+            <b><%= shopName %>!</b>
             We are excited to welcome you to our community and look forward to
             providing you with a seamless and exceptional shopping experience.
           </p>
@@ -128,12 +128,8 @@
         </div>
 
         <div class="customer-login">
-          <a
-            href="https://demo.elitecommerce.app/"
-            target="_blank"
-            id="visit-website-btn"
-          >
-            Visit Elite Commerce
+          <a href="<%= shopUrl %>" target="_blank" id="visit-website-btn">
+            Visit <%= shopName %>
           </a>
         </div>
       </div>

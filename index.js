@@ -36,18 +36,26 @@ app.get("/admin-greetings", (req, res) => {
   res.render("admin-greetings", {
     socialMedias,
     logoUrl,
+    userRole: "Admin",
+    shopName: "Elite Commerce",
+    shopUrl: "https://dashboard.elitecommerce.app",
+    userEmail: "nurulislamrimon@gmail.com",
+    userPassword: "123456",
   });
 });
 app.get("/customer-greetings", (req, res) => {
   res.render("customer-greetings", {
     socialMedias,
     logoUrl,
+    shopName: "Elite Commerce",
+    shopUrl: "https://dashboard.elitecommerce.app",
   });
 });
 app.get("/password-reset-completed", (req, res) => {
   res.render("password-reset-completed", {
     socialMedias,
     logoUrl,
+    accessUrl: "https://dashboard.elitecommerce.app",
   });
 });
 app.get("/password-reset-otp", (req, res) => {
