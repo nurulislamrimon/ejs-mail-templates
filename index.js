@@ -11,24 +11,12 @@ const logoUrl = "/mail_assets/assets/LogoElite.png";
 
 const socialMedias = [
   {
-    name: "Discord",
-    url: "https://discord.com/nurulislamrimon",
+    icon: "https://malepower-boost.com/settings/discordicon1735572567389.png",
+    link: "facebook.com",
   },
   {
-    name: "Github",
-    url: "https://github.com/nurulislamrimon",
-  },
-  {
-    name: "Whatsapp",
-    url: "https://wa.me/+8801715494846",
-  },
-  {
-    name: "Linkedin",
-    url: "https://linkdin.com/nurulislamrimon",
-  },
-  {
-    name: "Gmail",
-    url: "mailto:nurulislamrimon@gmail.com",
+    icon: "https://malepower-boost.com/settings/linkedinicon1735572567389.png",
+    link: "legbook.com",
   },
 ];
 

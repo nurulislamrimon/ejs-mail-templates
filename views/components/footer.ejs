@@ -1,81 +1,10 @@
-<style>
-  .template-footer {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-  }
-  .template-footer h2 {
-    font-weight: 700;
-    font-size: 20px;
-    background: linear-gradient(90deg, #294393, #04a4e6 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .template-footer span {
-    font-size: 14px;
-    font-weight: 400;
-    color: #4c4c4c;
-    line-height: 23px;
-  }
-  .social-media-link {
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
-    align-items: center;
-    gap: 7px;
-  }
-  .social-media-link a {
-    text-decoration: none;
-    color: #ffff;
-    border-radius: 50%;
-    width: 26px;
-    height: 26px;
-    padding: 6px;
-    background: linear-gradient(180deg, #01904d 0%, #0ce47f 100%);
-    display: grid;
-    place-items: center;
-  }
-
-  @media screen and (max-width: 768px) {
-    .template-footer {
-      gap: 5px;
-    }
-    .template-footer h2 {
-      font-size: 16px;
-      font-weight: 600;
-    }
-    .template-footer span {
-      font-size: 12px;
-    }
-    .social-media-link {
-      gap: 5px;
-    }
-    .social-media-link a {
-      width: 20px;
-      height: 20px;
-      padding: 5px;
-    }
-  }
-</style>
-
 <div class="template-footer">
   <h2>Need Help?</h2>
   <span>Please Notify In Our Social Media.</span>
   <div class="social-media-link">
     <% socialMedias.forEach(socialMedia => { %>
-    <a href="<%= socialMedia.url %>" target="_blank" class="social-media-link">
-      <!-- Conditionally Include SVG Icons based on socialMedia.name -->
-      <% if (socialMedia.name === "Discord") { %>
-      <%-include('./icons/DiscordIcon') %> <% } else if(socialMedia.name ===
-      "Linkedin"){ %> <%-include('./icons/LinkedinIcon') %> <% } else
-      if(socialMedia.name === "Whatsapp"){ %> <%-include('./icons/WhatsappIcon')
-      %> <% } else if(socialMedia.name === "Gmail"){ %>
-      <%-include('./icons/GmailIcon') %> <% } else if(socialMedia.name ===
-      "Github") { %> <%-include('./icons/GithubIcon') %> <% } %>
+    <a href="<%= socialMedia.link %>" target="_blank" class="social-media-link">
+      <img src="<%= socialMedia.icon %>" alt="" />
     </a>
     <% }); %>
   </div>
