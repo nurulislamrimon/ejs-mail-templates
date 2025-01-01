@@ -1,3 +1,25 @@
 <div class="template-header">
-  <img class="logo-img" src="<%= logoUrl %>" alt="logo" />
+  <img src="<%= logoUrl %>" alt="logo" class="logo-img" />
 </div>
+
+<style>
+  .template-header {
+    display: grid;
+    place-items: center;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 20px;
+  }
+  .logo-img {
+    width: 180px;
+    height: 50px;
+  }
+  @media screen and (max-width: 768px) {
+    .template-header {
+      padding: 8px;
+    }
+    .logo-img {
+      width: 130px;
+      height: 40px;
+    }
+  }
+</style>
