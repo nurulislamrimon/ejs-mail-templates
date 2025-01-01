@@ -9,133 +9,98 @@
       rel="stylesheet"
     />
     <style>
-       * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    display: grid;
-    height: 100vh;
-    place-items: center;
-    overflow-y: auto;
-    background: #bebdbd;
-    font-family: "Open Sans", sans-serif;
-    gap: 10px;
-  }
-  .template-container {
-    background-color: #ffff;
-    max-width: 600px;
-    border-radius: 10px;
-    overflow-y: auto;
-    --webkit-scrollbar-width: none;
-    padding-bottom: 20px;
-    border: 1px solid #e6e6e6;
-  }
+       /* common css */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: min-content;
+        overflow-y: auto;
+        background: #f3f3f3;
+        font-family: "Open Sans", sans-serif;
+      }
+      .template-container {
+        margin: 0 auto;
+        background-color: #ffff;
+        max-width: 600px;
+        border-radius: 10px;
+        padding-bottom: 20px;
+        border: 1px solid #e6e6e6;
+      }
+      /* header css */
+      .template-header {
+        text-align: center;
+        border-bottom: 1px solid #e6e6e6;
+        padding: 20px;
+      }
+      .logo-img {
+        width: 180px;
+        height: 50px;
+      }
+      /* header css */
 
-  .template-header {
-    display: grid;
-    place-items: center;
-    border-bottom: 1px solid #e6e6e6;
-    padding: 20px;
-  }
+      /* footer css */
+      .template-footer {
+        text-align: center;
+        display: block;
+      }
+      .template-footer-heading {
+        font-weight: 700;
+        font-size: 20px;
+        background: linear-gradient(90deg, #294393, #04a4e6 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .template-footer-description {
+        font-size: 14px;
+        font-weight: 400;
+        color: #4c4c4c;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+      .template-footer-social-medias {
+        text-align: center;
+      }
+      .template-footer-social-media-link {
+        text-decoration: none;
+        color: white;
+        border-radius: 50%;
+        width: 26px;
+        height: 26px;
+        display: inline-block;
+        background: linear-gradient(180deg, #01904d 0%, #0ce47f 100%);
+        position: relative;
+      }
+      .template-footer-social-media-icon {
+        position: absolute;
+        top: 50%;
+        left: 24%;
+        translate: 50%;
+        transform: translate(-50%, -50%);
+      }
+      /* footer css */
 
-  .logo-img {
-    width: 180px;
-    height: 50px;
-  }
+      /* common css */
+
   
-  .template-footer {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-  }
-  .template-footer h2 {
-    font-weight: 700;
-    font-size: 20px;
-    background: linear-gradient(90deg, #294393, #04a4e6 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .template-footer span {
-    font-size: 14px;
-    font-weight: 400;
-    color: #4c4c4c;
-    line-height: 23px;
-  }
-  .social-media-link {
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: center;
-    align-items: center;
-    gap: 7px;
-  }
-  .social-media-link a {
-    text-decoration: none;
-    color: #ffff;
-    border-radius: 50%;
-    width: 26px;
-    height: 26px;
-    padding: 6px;
-    background: linear-gradient(180deg, #01904d 0%, #0ce47f 100%);
-    display: grid;
-    place-items: center;
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .template-container {
-      padding-bottom: 10px;
-    }
-    .template-header {
-      padding: 10px;
-    }
-    .logo-img {
-      width: 140px;
-      height: 40px;
-    }
-    .template-footer {
-      gap: 5px;
-    }
-    .template-footer h2 {
-      font-size: 16px;
-      font-weight: 600;
-    }
-    .template-footer span {
-      font-size: 12px;
-    }
-    .social-media-link {
-      gap: 5px;
-    }
-    .social-media-link a {
-      width: 20px;
-      height: 20px;
-      padding: 5px;
-    }
-  }
-
   /* common styles ended */
   
       .template-body {
         padding: 35px 30px;
-        display: grid;
-        justify-content: center;
-        align-items: center;
       }
       .template-body-content {
-        display: grid;
-        justify-items: center;
         text-align: center;
-        gap: 10px;
+        display: block;
+       
       }
       .template-body-content h1 {
         font-size: 24px;
         font-weight: 700;
         color: #4c4c4c;
+        margin-top: 8px;
+        margin-bottom: 10px;
       }
       .template-body-content p {
         font-size: 16px;
@@ -144,9 +109,8 @@
       }
 
       .greetings-body-info {
-        display: grid;
-        justify-items: center;
-        gap: 20px;
+       display: block;
+       text-align: center;
       }
       .greetings-body-info h1 {
         font-size: 20px;
@@ -154,10 +118,8 @@
         color: #333333;
       }
       .greetings {
-        display: grid;
-        justify-items: center;
+       display: block;
         text-align: center;
-        gap: 22px;
         margin-top: 30px;
       }
       .greetings p {
@@ -166,7 +128,7 @@
         color: #333333;
       }
 
-      .template-body-content span {
+      .template-body-content div {
         font-weight: 700;
         font-size: 16px;
         background: linear-gradient(90deg, #01904d, #0ce47f 100%);
@@ -180,18 +142,19 @@
         padding: 30px;
         border-radius: 20px;
         margin: 10px 0;
-        display: grid;
-        gap: 10px;
+
+      }
+      .admin-info hr {
+        margin: 15px 0;
       }
       .admin-info div {
-        display: grid;
-        justify-items: center;
-        gap: 10px;
+       text-align: center;
       }
       .admin-info div h3 {
         font-size: 14px;
         font-weight: 400;
         color: #4c4c4c;
+        margin-bottom: 10px;
       }
       .admin-info div span {
         font-size: 18px;
@@ -199,8 +162,8 @@
         color: #4c4c4c;
       }
       .admin-login {
-        display: grid;
-        justify-items: center;
+        margin: 20px 0;
+        text-align: center;
       }
 
       #website-login-btn {
@@ -212,10 +175,78 @@
         font-weight: 600;
         border: none;
         cursor: pointer;
-
         text-decoration: none;
         align-self: center;
       }
+
+      @media screen and (max-width: 768px) {
+     .template-container {
+          padding-bottom: 15px;
+        }
+        /* header media query css */
+        .template-header {
+          padding: 8px;
+        }
+        .logo-img {
+          width: 130px;
+          height: 40px;
+        }
+        /* header media query css */
+
+        .template-body-content div{
+          font-weight: 600;
+          font-size: 14px;
+        }
+
+        .template-body-content h1 {
+          font-size: 20px;
+          font-weight: 600;
+        }
+        .template-body-content p {
+          font-size: 13px;
+        }
+
+        .admin-info div span {
+        font-size: 16px;
+      }
+
+        .admin-info div h3 {
+          margin-bottom: 10px;
+          font-size: 13px;
+        }
+        /* footer media query css */
+        .template-footer-heading {
+          font-weight: 600;
+          font-size: 16px;
+        }
+        .template-footer-description {
+          font-size: 12px;
+          margin-top: 3px;
+          margin-bottom: 3px;
+        }
+        .template-footer-social-media-link {
+          width: 20px;
+          height: 20px;
+        }
+        .template-footer-social-media-icon {
+          left: 17%;
+          width: 14px;
+        }
+        /* footer media query css */
+
+        #website-login-btn {
+          font-weight: 500;
+          font-size: 12px;
+          padding: 8px 16px;
+        }
+
+         .admin-info hr {
+        margin: 10px 0;
+      }
+      
+      
+  }
+
     </style>
   </head>
   <body>
@@ -225,7 +256,7 @@
       <div class="template-body">
         <div class="template-body-content">
           <%- include('./components/heros/AdminGreetingSvg.ejs') %>
-          <span><%= userRole %></span>
+          <div><%= userRole %></div>
           <h1>Welcome To <%= shopName %></h1>
           <p>
             The Super Admin assigns to you <%= userRole %> role In <%= shopName %>,

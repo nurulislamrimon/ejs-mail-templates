@@ -10,93 +10,208 @@
     />
 
     <style>
+      /* common css */
       * {
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
       }
-    </style>
-  </head>
-  <body
-    style="
-      display: grid;
-      height: 100vh;
-      place-items: center;
-      overflow-y: auto;
-      background: #bebdbd;
-      font-family: 'Open Sans', sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    "
-  >
-    <div
-      style="
+      body {
+        height: min-content;
+        overflow-y: auto;
+        background: #f3f3f3;
+        font-family: "Open Sans", sans-serif;
+      }
+      .template-container {
+        margin: 0 auto;
         background-color: #ffff;
         max-width: 600px;
         border-radius: 10px;
-        overflow-y: auto;
-        --webkit-scrollbar-width: none;
         padding-bottom: 20px;
         border: 1px solid #e6e6e6;
-      "
-    >
+      }
+      /* header css */
+      .template-header {
+        text-align: center;
+        border-bottom: 1px solid #e6e6e6;
+        padding: 20px;
+      }
+      .logo-img {
+        width: 180px;
+        height: 50px;
+      }
+      /* header css */
+
+      /* footer css */
+      .template-footer {
+        text-align: center;
+        display: block;
+      }
+      .template-footer-heading {
+        font-weight: 700;
+        font-size: 20px;
+        background: linear-gradient(90deg, #294393, #04a4e6 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .template-footer-description {
+        font-size: 14px;
+        font-weight: 400;
+        color: #4c4c4c;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+      .template-footer-social-medias {
+        text-align: center;
+      }
+      .template-footer-social-media-link {
+        text-decoration: none;
+        color: white;
+        border-radius: 50%;
+        width: 26px;
+        height: 26px;
+        display: inline-block;
+        background: linear-gradient(180deg, #01904d 0%, #0ce47f 100%);
+        position: relative;
+      }
+      .template-footer-social-media-icon {
+        position: absolute;
+        top: 50%;
+        left: 24%;
+        translate: 50%;
+        transform: translate(-50%, -50%);
+      }
+      /* footer css */
+
+      /* common css */
+
+      .template-body {
+        padding: 35px 30px;
+      }
+      .template-body-header {
+        text-align: center;
+      }
+      .template-body-header h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: #4c4c4c;
+        margin: 5px 0px;
+      }
+      .template-body-header p {
+        font-size: 16px;
+        font-weight: 400;
+        color: #4c4c4c;
+      }
+      .template-body-main {
+        margin-top: 30px;
+      }
+      .otp-container {
+        width: 80%;
+        margin: 0 auto;
+        background-color: #f7f7fb;
+        padding: 25px 20px;
+        border-radius: 20px;
+        text-align: center;
+      }
+      .otp-container span {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 68px;
+        text-align: center;
+        color: #000000;
+        text-align: center;
+        margin: 0px 20px;
+      }
+      .template-body-description {
+        font-size: 16px;
+        font-weight: 400;
+        color: #4c4c4c;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .template-container {
+          padding-bottom: 15px;
+        }
+        /* header media query css */
+        .template-header {
+          padding: 8px;
+        }
+        .logo-img {
+          width: 130px;
+          height: 40px;
+        }
+        /* header media query css */
+
+        /* footer media query css */
+        .template-footer-heading {
+          font-weight: 600;
+          font-size: 16px;
+        }
+        .template-footer-description {
+          font-size: 12px;
+          margin-top: 3px;
+          margin-bottom: 3px;
+        }
+        .template-footer-social-media-link {
+          width: 20px;
+          height: 20px;
+        }
+        .template-footer-social-media-icon {
+          left: 17%;
+          width: 14px;
+        }
+        /* footer media query css */
+
+        .template-body {
+          padding: 25px 20px;
+        }
+        .template-body-header h1 {
+          font-size: 20px;
+          font-weight: 600px;
+          margin: 4px 0px;
+        }
+        .template-body-header p {
+          font-size: 14px;
+        }
+        .template-body-main {
+          margin-top: 15px;
+        }
+
+        .otp-container span {
+          font-weight: 600px;
+          font-size: 40;
+          line-height: 30px;
+          margin: 0px 10px;
+        }
+        .template-body-description {
+          font-size: 14px;
+          margin-top: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="template-container">
       <%- include('./components/header.ejs',{logoUrl}) %>
 
-      <div style="padding: 35px 30px">
-        <div style="text-align: center">
+      <div class="template-body">
+        <div class="template-body-header">
           <%- include('./components/heros/SignupVerificationSvg.ejs') %>
-          <h1
-            style="
-              font-size: 24px;
-              font-weight: 700;
-              color: #4c4c4c;
-              margin: 5px 0px;
-            "
-          >
-            Sign Up Verification Code
-          </h1>
-          <p style="font-size: 16px; font-weight: 400; color: #4c4c4c">
-            Please enter this confirmation code in the window
-            <br />
-            where you started creating your account:
+          <h1>Sign Up Verification Code</h1>
+          <p>
+            Please enter this confirmation code in the window where you started
+            creating your account:
           </p>
         </div>
-        <div style="margin-top: 30px">
-          <div
-            style="
-              width: 80%;
-              margin: 0 auto;
-              background-color: #f7f7fb;
-              padding: 25px 20px;
-              border-radius: 20px;
-              text-align: center;
-            "
-          >
+        <div class="template-body-main">
+          <div class="otp-container">
             <% otp.forEach(digit => { %>
-            <span
-              style="
-                font-weight: 700;
-                font-size: 50px;
-                line-height: 68px;
-                text-align: center;
-                color: #000000;
-                text-align: center;
-                margin: 0px 20px;
-              "
-              ><%= digit %></span
-            >
+            <span><%= digit %></span>
             <% }); %>
           </div>
-          <p
-            style="
-              font-size: 16px;
-              font-weight: 400;
-              color: #4c4c4c;
-              text-align: center;
-              margin-top: 20px;
-            "
-          >
+          <p class="template-body-description">
             All you have to do is copy the confirmation code and paste it to
             your form to complete the email verification process.
           </p>

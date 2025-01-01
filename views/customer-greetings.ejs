@@ -10,50 +10,43 @@
     />
 
     <style>
+      /* common css */
       * {
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
       }
       body {
-        display: grid;
-        height: 100vh;
-        place-items: center;
+        height: min-content;
         overflow-y: auto;
-        background: #bebdbd;
+        background: #f3f3f3;
         font-family: "Open Sans", sans-serif;
-        gap: 10px;
       }
       .template-container {
+        margin: 0 auto;
         background-color: #ffff;
         max-width: 600px;
         border-radius: 10px;
-        overflow-y: auto;
-        --webkit-scrollbar-width: none;
         padding-bottom: 20px;
         border: 1px solid #e6e6e6;
       }
-
+      /* header css */
       .template-header {
-        display: grid;
-        place-items: center;
+        text-align: center;
         border-bottom: 1px solid #e6e6e6;
         padding: 20px;
       }
-
       .logo-img {
         width: 180px;
         height: 50px;
       }
+      /* header css */
 
+      /* footer css */
       .template-footer {
-        display: grid;
-        justify-items: center;
-        align-items: center;
         text-align: center;
-        gap: 10px;
+        display: block;
       }
-      .template-footer h2 {
+      .template-footer-heading {
         font-weight: 700;
         font-size: 20px;
         background: linear-gradient(90deg, #294393, #04a4e6 100%);
@@ -61,72 +54,45 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-
-      .template-footer span {
+      .template-footer-description {
         font-size: 14px;
         font-weight: 400;
         color: #4c4c4c;
-        line-height: 23px;
+        margin-top: 8px;
+        margin-bottom: 8px;
       }
-      .social-media-link {
-        display: grid;
-        grid-auto-flow: column;
-        justify-content: center;
-        align-items: center;
-        gap: 7px;
+      .template-footer-social-medias {
+        text-align: center;
       }
-      .social-media-link a {
+      .template-footer-social-media-link {
         text-decoration: none;
-        color: #ffff;
+        color: white;
         border-radius: 50%;
         width: 26px;
         height: 26px;
-        padding: 6px;
+        display: inline-block;
         background: linear-gradient(180deg, #01904d 0%, #0ce47f 100%);
-        display: grid;
-        place-items: center;
+        position: relative;
       }
+      .template-footer-social-media-icon {
+        position: absolute;
+        top: 50%;
+        left: 24%;
+        translate: 50%;
+        transform: translate(-50%, -50%);
+      }
+      /* footer css */
 
-      @media screen and (max-width: 768px) {
-        .template-container {
-          padding-bottom: 10px;
-        }
-        .template-header {
-          padding: 10px;
-        }
-        .logo-img {
-          width: 140px;
-          height: 40px;
-        }
-        .template-footer {
-          gap: 5px;
-        }
-        .template-footer h2 {
-          font-size: 16px;
-          font-weight: 600;
-        }
-        .template-footer span {
-          font-size: 12px;
-        }
-        .social-media-link {
-          gap: 5px;
-        }
-        .social-media-link a {
-          width: 20px;
-          height: 20px;
-          padding: 5px;
-        }
-      }
+      /* common css */
 
       /* common styles ended */
       .template-body {
         padding: 35px 30px;
-        display: grid;
+
         justify-items: center;
       }
 
       .template-body-content {
-        display: grid;
         text-align: center;
         gap: 10px;
         justify-items: center;
@@ -145,7 +111,6 @@
       }
 
       .greetings-body-info {
-        display: grid;
         gap: 20px;
         justify-items: center;
       }
@@ -157,10 +122,8 @@
       }
 
       .greetings {
-        display: grid;
         text-align: center;
         gap: 22px;
-        justify-items: center;
         margin-top: 30px;
       }
 
@@ -168,13 +131,13 @@
         font-size: 12px;
         font-weight: 400;
         color: #333333;
+        margin-bottom: 20px;
       }
 
       .greetings-info {
-        display: grid;
         gap: 4px;
         text-align: center;
-        justify-items: center;
+        margin-bottom: 20px;
       }
 
       .greetings-info h3 {
@@ -190,8 +153,7 @@
       }
 
       .customer-login {
-        display: grid;
-        justify-items: center;
+        text-align: center;
         margin: 20px auto;
       }
 
@@ -206,6 +168,49 @@
         cursor: pointer;
         text-decoration: none;
         justify-self: center;
+      }
+
+      @media screen and (max-width: 768px) {
+        .template-container {
+          padding-bottom: 15px;
+        }
+        /* header media query css */
+        .template-header {
+          padding: 8px;
+        }
+        .logo-img {
+          width: 130px;
+          height: 40px;
+        }
+        /* header media query css */
+
+        /* footer media query css */
+        .template-footer-heading {
+          font-weight: 600;
+          font-size: 16px;
+        }
+        .template-footer-description {
+          font-size: 12px;
+          margin-top: 3px;
+          margin-bottom: 3px;
+        }
+        .template-footer-social-media-link {
+          width: 20px;
+          height: 20px;
+        }
+        .template-footer-social-media-icon {
+          left: 17%;
+          width: 14px;
+        }
+        /* footer media query css */
+
+        .greetings-body-info h1 {
+          font-size: 18px;
+        }
+        #visit-website-btn {
+          font-size: 12px;
+          padding: 8px 16px;
+        }
       }
     </style>
   </head>
