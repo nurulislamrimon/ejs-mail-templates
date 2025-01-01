@@ -16,15 +16,20 @@
         padding: 0;
       }
       body {
-        height: min-content;
+        position: relative;
+        width: 100vw;
+        height: 100vh;
         overflow-y: auto;
         background: #f3f3f3;
         font-family: "Open Sans", sans-serif;
       }
       .template-container {
-        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         background-color: #ffff;
-        max-width: 600px;
+        width: 600px;
         border-radius: 10px;
         padding-bottom: 20px;
         border: 1px solid #e6e6e6;
@@ -170,9 +175,10 @@
         justify-self: center;
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 600px) {
         .template-container {
           padding-bottom: 15px;
+          width: 100%;
         }
         /* header media query css */
         .template-header {
