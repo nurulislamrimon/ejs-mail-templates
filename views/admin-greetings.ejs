@@ -14,19 +14,14 @@
         margin: 0;
         padding: 0;
       }
-      body {
-        position: relative;
-        width: 100vw;
-        height: 100vh;
+       body {
+        overflow-x: hidden;
         overflow-y: auto;
         background: #f3f3f3;
         font-family: "Open Sans", sans-serif;
       }
       .template-container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        margin: 50px auto 25px auto;
         background-color: #ffff;
         width: 600px;
         border-radius: 10px;
@@ -78,11 +73,10 @@
         background: linear-gradient(180deg, #01904d 0%, #0ce47f 100%);
         position: relative;
       }
-      .template-footer-social-media-icon {
+     .template-footer-social-media-icon {
         position: absolute;
         top: 50%;
-        left: 24%;
-        translate: 50%;
+        left: 50%;
         transform: translate(-50%, -50%);
       }
       /* footer css */
@@ -235,7 +229,6 @@
           height: 20px;
         }
         .template-footer-social-media-icon {
-          left: 17%;
           width: 14px;
         }
         /* footer media query css */
