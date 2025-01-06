@@ -7,7 +7,7 @@ app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "public")));
 
-const logoUrl = "/mail_assets/assets/LogoElite.png";
+const logoUrl = "/mail_assets/LogoElite.png";
 
 const socialMedias = [
   {
